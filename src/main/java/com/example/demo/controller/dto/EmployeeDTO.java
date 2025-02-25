@@ -1,11 +1,11 @@
 package com.example.demo.controller.dto;
 
+import com.example.demo.advice.validation.anotation.ValidName;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.CreditCardNumber;
 
 import java.time.LocalDate;
 
@@ -14,6 +14,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class EmployeeDTO {
 
+    @ValidName()
     @NotNull(message = "Must not be null")
     private String name;
 

@@ -11,3 +11,5 @@ spring:
         default_schema: public
     hibernate:
       ddl-auto: update
+  messages:
+    basename: messages
